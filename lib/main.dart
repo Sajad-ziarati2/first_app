@@ -1,4 +1,4 @@
-import 'package:first_app/test_class.dart';
+import 'package:first_app/color.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -6,7 +6,7 @@ void main() {
     MaterialApp(
       home: Scaffold(
         body: Testclass(
-           Color.fromARGB(103, 145, 94, 255),
+          Color.fromARGB(168, 369, 90, 596),
           Color.fromARGB(103, 145, 94, 255),
         ),
       ),

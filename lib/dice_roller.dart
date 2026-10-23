@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
+
 final photochanger = Random();
 
 class DiceRoller extends StatefulWidget {
@@ -24,16 +25,20 @@ class _DiceRoller extends State<DiceRoller> {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Image.asset('assets/photo/$currentDiceroll.png', height: 200,),
+        Image.asset('assets/photo/$currentDiceroll.png', height: 200),
         const SizedBox(height: 30),
-        TextButton(
+        TextButton.icon(
           onPressed: phototest,
           style: TextButton.styleFrom(
-            foregroundColor: const Color.fromARGB(255, 0, 0, 0),backgroundColor: Colors.white,
+            foregroundColor: const Color.fromARGB(255, 0, 0, 0),
+            backgroundColor: Colors.white,
           ),
-          child: Text("change photo", style: TextStyle(fontSize: 20,),)
+          label: Text("change photo", style: TextStyle(fontSize: 20)),
         ),
-        TextButton(onPressed: phototest, child: Text('Change Again'))
+        SizedBox(height: 30),
+        TextButton(onPressed: phototest,
+        
+         child: Text('Change Again')),
       ],
     );
   }
